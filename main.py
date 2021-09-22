@@ -32,7 +32,7 @@ async def reloadAssets(min_avax_liq):
                     tempdic[symbol] = {"id": tokens["id"], "liq": liq}
         skip += 1000
 
-    name2address = {}
+    name2address = {"wavax": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7", "avax": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7"}
     for key, value in tempdic.items():
         if key[0] == "w" and key[-2:] == ".e":
             name2address[key[1:-2]] = value["id"]
